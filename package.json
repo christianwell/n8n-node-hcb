@@ -1,0 +1,50 @@
+{
+	"name": "n8n-nodes-hcb",
+	"version": "0.1.0",
+	"description": "n8n community node for the HCB (Hack Club Bank) Transparency API",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n-nodes",
+		"hcb",
+		"hack-club",
+		"hackclub",
+		"transparency",
+		"fiscal-sponsorship"
+	],
+	"license": "MIT",
+	"homepage": "",
+	"author": {
+		"name": "Christian"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"main": "dist/nodes/Hcb/Hcb.node.js",
+	"scripts": {
+		"build": "tsc && npm run copy:icons",
+		"build:watch": "tsc --watch",
+		"copy:icons": "cp nodes/Hcb/*.svg dist/nodes/Hcb/ 2>/dev/null || true",
+		"dev": "npm run build && npm run copy:icons",
+		"lint": "tsc --noEmit",
+		"prepublishOnly": "npm run build"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"nodes": [
+			"dist/nodes/Hcb/Hcb.node.js",
+			"dist/nodes/Hcb/HcbTrigger.node.js"
+		],
+		"credentials": []
+	},
+	"devDependencies": {
+		"n8n-workflow": "*",
+		"typescript": "~5.7.0"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
