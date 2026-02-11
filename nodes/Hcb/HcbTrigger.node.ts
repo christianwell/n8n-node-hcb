@@ -30,6 +30,7 @@ export class HcbTrigger implements INodeType {
 		polling: true,
 		inputs: [],
 		outputs: [NodeConnectionTypes.Main],
+		usableAsTool: true,
 		properties: [
 			{
 				displayName: 'Resource',
