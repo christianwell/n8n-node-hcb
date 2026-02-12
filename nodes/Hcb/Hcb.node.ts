@@ -27,6 +27,9 @@ export class Hcb implements INodeType {
 		defaults: {
 			name: 'HCB',
 		},
+		codex: {
+			alias: ['hackclub', 'hack club', 'hack club bank'],
+		},
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],
 		usableAsTool: true,
